@@ -28,6 +28,13 @@ names.forEach((element, index) => {
 });
 
 // EXERCISE 2
+
+// Create array of all uppercase provinces
 uppercaseProvinces = provinces.map((element) => {
-element.toUpperCase();
+  return element.toUpperCase();
 });
+
+// Log new array to console
+console.log(uppercaseProvinces);
+
+// EXERCISE 3
