@@ -51,3 +51,14 @@ console.log(lengthOfNames)
 
 
 // EXERCISE 4
+
+// Call sort function on provinces array to sort alphabetically
+const provincesAlphabetical = provinces.sort()
+
+// Console log the new sorted array
+console.log(provincesAlphabetical)
+
+
+// EXERCISE 5
+
+// 
