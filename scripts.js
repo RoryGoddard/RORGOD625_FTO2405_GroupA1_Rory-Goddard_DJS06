@@ -30,7 +30,7 @@ names.forEach((element, index) => {
 // EXERCISE 2
 
 // Create array of all uppercase provinces
-uppercaseProvinces = provinces.map((element) => {
+const uppercaseProvinces = provinces.map((element) => {
   return element.toUpperCase();
 });
 
@@ -38,3 +38,4 @@ uppercaseProvinces = provinces.map((element) => {
 console.log(uppercaseProvinces);
 
 // EXERCISE 3
+
