@@ -14,7 +14,18 @@ const products = [
   { product: 'tea', price: '' },
 ]
 
+//EXERCISE 1
+
+// Console log all names
 names.forEach(name => console.log(name))
+
+// Console log all provinces
 provinces.forEach(province => console.log(province))
 
-names.forEach(element, index => console.log(`${element} (${provinces[index]})`))
+// Console log names with provinces
+names.forEach((element, index) => {
+  console.log(`${element} (${provinces[index]})`)
+})
+
+// EXERCISE 2
+
