@@ -27,6 +27,7 @@ names.forEach((element, index) => {
   console.log(`${element} (${provinces[index]})`);
 });
 
+
 // EXERCISE 2
 
 // Create array of all uppercase provinces
@@ -37,6 +38,7 @@ const uppercaseProvinces = provinces.map((element) => {
 // Log new array to console
 console.log(uppercaseProvinces);
 
+
 // EXERCISE 3
 
 // Create new array with length of each name
@@ -46,3 +48,6 @@ const lengthOfNames = names.map((element) => {
 
 // Console log the new array 
 console.log(lengthOfNames)
+
+
+// EXERCISE 4
