@@ -61,4 +61,15 @@ console.log(provincesAlphabetical)
 
 // EXERCISE 5
 
-// 
+// Filter the provinces containing the word "Cape"
+const provincesWithoutCape = provinces.filter((element) => {
+  if (!element.includes("Cape")) {
+    return element
+  }
+})
+
+// Log the count of the remaining provinces
+console.log(provincesWithoutCape.length)
+
+
+// EXERCISE 6
