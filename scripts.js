@@ -39,3 +39,10 @@ console.log(uppercaseProvinces);
 
 // EXERCISE 3
 
+// Create new array with length of each name
+const lengthOfNames = names.map((element) => {
+  return element.length
+})
+
+// Console log the new array 
+console.log(lengthOfNames)
