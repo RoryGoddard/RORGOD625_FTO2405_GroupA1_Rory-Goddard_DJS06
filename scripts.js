@@ -13,3 +13,8 @@ const products = [
   { product: 'coffee', price: 10 },
   { product: 'tea', price: '' },
 ]
+
+names.forEach(name => console.log(name))
+provinces.forEach(province => console.log(province))
+
+names.forEach(element, index => console.log(`${element} (${provinces[index]})`))
