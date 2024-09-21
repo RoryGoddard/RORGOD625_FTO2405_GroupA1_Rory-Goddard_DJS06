@@ -17,15 +17,17 @@ const products = [
 //EXERCISE 1
 
 // Console log all names
-names.forEach(name => console.log(name))
+names.forEach(name => console.log(name));
 
 // Console log all provinces
-provinces.forEach(province => console.log(province))
+provinces.forEach(province => console.log(province));
 
 // Console log names with provinces
 names.forEach((element, index) => {
-  console.log(`${element} (${provinces[index]})`)
-})
+  console.log(`${element} (${provinces[index]})`);
+});
 
 // EXERCISE 2
-
+uppercaseProvinces = provinces.map((element) => {
+element.toUpperCase();
+});
