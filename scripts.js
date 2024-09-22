@@ -117,3 +117,12 @@ products.forEach((currentValue) => {
 
 
 // 2. 
+// Create array of filtered products where products only get added if they are 5 characters long or less
+const filteredProductsByLength = products.filter((currentValue) => {
+  return currentValue.product.length <= 5
+})
+
+// Console log the resulting array
+console.log(filteredProductsByLength)
+
+// 3.
