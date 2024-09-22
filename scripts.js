@@ -44,19 +44,19 @@ console.log(uppercaseProvinces);
 // Create new array with length of each name
 const lengthOfNames = names.map((element) => {
   return element.length
-})
+});
 
 // Console log the new array 
-console.log(lengthOfNames)
+console.log(lengthOfNames);
 
 
 // EXERCISE 4
 
 // Call sort function on provinces array to sort alphabetically
-const provincesAlphabetical = provinces.sort()
+const provincesAlphabetical = provinces.sort();
 
 // Console log the new sorted array
-console.log(provincesAlphabetical)
+console.log(provincesAlphabetical);
 
 
 // EXERCISE 5
@@ -66,10 +66,27 @@ const provincesWithoutCape = provinces.filter((element) => {
   if (!element.includes("Cape")) {
     return element
   }
-})
+});
 
 // Log the count of the remaining provinces
-console.log(provincesWithoutCape.length)
+console.log(provincesWithoutCape.length);
 
 
 // EXERCISE 6
+
+// Function which will split inputted name into an array of its characters, checking if any are "s"
+const hasLetterS = (name) => {
+  const characters = name.toLowerCase().split('');
+  return characters.some((char) => char === 's');
+};
+
+// Use map to iterate over names calling the hasLetterS function on each name, turning it into an array and checking for "s"
+hasLetterSArray = names.map((name) => {
+  return hasLetterS(name)
+});
+
+// Console log the resulting array
+console.log(hasLetterSArray);
+
+
+// EXERCISE 7
