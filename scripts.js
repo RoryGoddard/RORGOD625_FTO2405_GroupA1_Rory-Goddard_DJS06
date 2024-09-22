@@ -125,6 +125,7 @@ const filteredProductsByLength = products.filter((currentValue) => {
 // Console log the resulting array
 console.log(filteredProductsByLength)
 
+
 // 3.
 // Create an array with only valid prices within
 const filteredProductsByPrice = products.filter((currentValue) => {
@@ -139,6 +140,7 @@ const totalPrice = filteredProductsByPrice.reduce((total, currentValue) => {
 // Console log the total price
 console.log(totalPrice)
 
+
 //4. 
 // Define a variable to hold the concatenated string
 // Run reducer method to grab current name and add it to an empty string, being stored as a total
@@ -148,5 +150,6 @@ const productNamesCombined = products.reduce((total, currentName) => {
 
 // Console log the resulting concatenated string
 console.log(productNamesCombined)
+
 
 //5. 
