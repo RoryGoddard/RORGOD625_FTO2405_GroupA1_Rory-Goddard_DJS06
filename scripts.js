@@ -153,3 +153,22 @@ console.log(productNamesCombined)
 
 
 //5. 
+// Define two variables to store max and min price objects within
+
+// Run reducer method on previously filtered price array, checking if current price value is higher than max,
+// Where initial value is defined as the first object within the array
+const maxPrice = filteredProductsByPrice.reduce((max, currentValue) => {
+  return parseFloat(max.price) > parseFloat(currentValue.price) ? max : currentValue;
+}, filteredProductsByPrice[0])
+
+// Run reducer method on previously filtered price array, checking if current price value is lower than max,
+// Where initial value is defined as the first object within the array
+const minPrice = filteredProductsByPrice.reduce((min, currentValue) => {
+  return parseFloat(min.price) < parseFloat(currentValue.price) ? min : currentValue;
+}, filteredProductsByPrice[0])
+
+// Console log string containing highest and lowest prices
+console.log(`Highest: ${parseFloat(maxPrice.price)}. Lowest: ${parseFloat(minPrice.price)}.`)
+
+
+
