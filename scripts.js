@@ -103,3 +103,17 @@ console.log(namesAndProvinces)
 
 
 // ADVANCED EXERCISES
+
+// 1.
+// Define function to console log items
+function printProductNames(product) {
+  console.log(product)
+}
+
+// Use forEach method to iterate over products and log the names
+products.forEach((currentValue) => {
+  printProductNames(currentValue.product)
+})
+
+
+// 2. 
