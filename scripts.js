@@ -96,10 +96,10 @@ console.log(hasLetterSArray);
 const namesAndProvinces = names.reduce((accumulator, currentName, index) => {
   accumulator[currentName] = provinces[index]
   return accumulator
-}, {})
+}, {});
 
 // Console.log resulting object
-console.log(namesAndProvinces)
+console.log(namesAndProvinces);
 
 
 // ADVANCED EXERCISES
@@ -108,37 +108,37 @@ console.log(namesAndProvinces)
 // Define function to console log items
 function printProductNames(product) {
   console.log(product)
-}
+};
 
 // Use forEach method to iterate over products and log the names
 products.forEach((currentValue) => {
   printProductNames(currentValue.product)
-})
+});
 
 
 // 2. 
 // Create array of filtered products where products only get added if they are 5 characters long or less
 const filteredProductsByLength = products.filter((currentValue) => {
   return currentValue.product.length <= 5
-})
+});
 
 // Console log the resulting array
-console.log(filteredProductsByLength)
+console.log(filteredProductsByLength);
 
 
 // 3.
 // Create an array with only valid prices within
 const filteredProductsByPrice = products.filter((currentValue) => {
-  return parseFloat(currentValue.price)
+  return parseFloat(currentValue.price);
 })
 
 // Run reducer method to calculate total price
 const totalPrice = filteredProductsByPrice.reduce((total, currentValue) => {
-  return total += parseFloat(currentValue.price)
+  return total += parseFloat(currentValue.price);
 }, 0)
 
 // Console log the total price
-console.log(totalPrice)
+console.log(totalPrice);
 
 
 //4. 
@@ -146,10 +146,10 @@ console.log(totalPrice)
 // Run reducer method to grab current name and add it to an empty string, being stored as a total
 const productNamesCombined = products.reduce((total, currentName) => {
   return total += currentName.product
-}, "")
+}, "");
 
 // Console log the resulting concatenated string
-console.log(productNamesCombined)
+console.log(productNamesCombined);
 
 
 //5. 
@@ -159,16 +159,36 @@ console.log(productNamesCombined)
 // Where initial value is defined as the first object within the array
 const maxPrice = filteredProductsByPrice.reduce((max, currentValue) => {
   return parseFloat(max.price) > parseFloat(currentValue.price) ? max : currentValue;
-}, filteredProductsByPrice[0])
+}, filteredProductsByPrice[0]);
 
 // Run reducer method on previously filtered price array, checking if current price value is lower than max,
 // Where initial value is defined as the first object within the array
 const minPrice = filteredProductsByPrice.reduce((min, currentValue) => {
   return parseFloat(min.price) < parseFloat(currentValue.price) ? min : currentValue;
-}, filteredProductsByPrice[0])
+}, filteredProductsByPrice[0]);
 
 // Console log string containing highest and lowest prices
-console.log(`Highest: ${parseFloat(maxPrice.price)}. Lowest: ${parseFloat(minPrice.price)}.`)
+console.log(`Highest: ${parseFloat(maxPrice.price)}. Lowest: ${parseFloat(minPrice.price)}.`);
 
 
+//6.
+// Define reducer method to take accumulator and currentValue
+// use object entries to get array of keys and values
+// create new object with new names of keys, and old values
+// push object to accumulator array
+// return the accumulator to be used for next iteration
+const newProductObject = products.reduce((accumulator, currentValue) => {
+  const productEntries = Object.entries(currentValue);
 
+  const renamedObject = {
+    name: productEntries[0][1],
+    cost: productEntries[1][1],
+  };
+
+  accumulator.push(renamedObject);
+
+  return accumulator;
+}, []);
+
+// Console log the new object
+console.log(newProductObject);
