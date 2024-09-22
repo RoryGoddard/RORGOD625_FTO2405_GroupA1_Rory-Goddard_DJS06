@@ -91,4 +91,15 @@ console.log(hasLetterSArray);
 
 // EXERCISE 7
 
+// Define new variable to assign reducer to
+// Call reduce to populate the object with the keys from the names array and values from the provinces array
+const namesAndProvinces = names.reduce((accumulator, currentName, index) => {
+  accumulator[currentName] = provinces[index]
+  return accumulator
+}, {})
 
+// Console.log resulting object
+console.log(namesAndProvinces)
+
+
+// ADVANCED EXERCISES
