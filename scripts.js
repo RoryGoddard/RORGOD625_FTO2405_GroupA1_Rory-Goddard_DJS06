@@ -126,3 +126,16 @@ const filteredProductsByLength = products.filter((currentValue) => {
 console.log(filteredProductsByLength)
 
 // 3.
+// Create an array with only valid prices within
+const filteredProductsByPrice = products.filter((currentValue) => {
+  return parseFloat(currentValue.price)
+})
+
+// Run reducer method to calculate total price
+const totalPrice = filteredProductsByPrice.reduce((total, currentValue) => {
+  return total += parseFloat(currentValue.price)
+}, 0)
+
+// Console log the total price
+console.log(totalPrice)
+
