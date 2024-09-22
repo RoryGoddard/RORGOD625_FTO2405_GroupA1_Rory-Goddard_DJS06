@@ -81,7 +81,7 @@ const hasLetterS = (name) => {
 };
 
 // Use map to iterate over names calling the hasLetterS function on each name, turning it into an array and checking for "s"
-hasLetterSArray = names.map((name) => {
+const hasLetterSArray = names.map((name) => {
   return hasLetterS(name)
 });
 
@@ -90,3 +90,5 @@ console.log(hasLetterSArray);
 
 
 // EXERCISE 7
+
+
